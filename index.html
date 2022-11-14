@@ -8,9 +8,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./simple-grid.css">
 
     <title>Document</title>
-    <h1> Car API's App </h1>
+    <h1 class="center"> Car API's App </h1>
     <br>
 
     <script type="text/x-tamplate" class="colorTemplateFilter">
@@ -67,58 +68,63 @@
 </head>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>make</th>
-                <th>color</th>
-                <th>model</th>
-                <th>price</th>
-                <th>reg_number</th>
-            </tr>
-        </thead>
-        <tbody class="cars"></tbody>
-    </table>
+    <div class="container" style="background-color: lightblue;">
+        <table class="center">
+            <thead>
+                <tr>
+                    <th>make</th>
+                    <th>color</th>
+                    <th>model</th>
+                    <th>price</th>
+                    <th>reg_number</th>
+                </tr>
+            </thead>
+            <tbody class="cars"></tbody>
+        </table>
+        <div style="padding-left:200px; ">
+            <div class="colors "> </div>
+            <div class="make ">
+            </div>
 
-    <div class="colors"> </div>
-    <div class="make"> </div>
-    <br><br>
-    <div class="filterMake">
+            <br><br>
+            <div class="filterMake">
 
-        <label for="carsType">Choose a car:</label>
+                <label for="carsType">Choose a car:</label>
 
-        <select name="cars" class="defarentcars">
-            <option value="Volkswagen">Volkswagen</option>
-            <option value="Toyota">Toyota</option>
-            <option value="Nissan">Nissan</option>
-            <option value="Ford">Ford</option>
-        </select>
-        <button class="btn" >select</button>
+                <select name="cars" class="defarentcars dropdown-content">
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Ford">Ford</option>
+                </select>
+                <button class="btn">select</button>
 
-        <br><br>
+                <br><br>
 
-        <div class="desplay"></div>
+                <div class="desplay"></div>
 
-    </div>
-    <br><br>
+            </div>
+            <br><br>
 
-    <div class="filtercolor">
+            <div class="filtercolor">
 
-        <label for="colorType">Choose a color:</label>
+                <label for="colorType">Choose a color:</label>
 
-        <select name="color" class="defarentcars2">
-            <option value="Blue">Blue</option>
-            <option value="Red">Red</option>
-            <option value="Orange">Orange</option>
-            <option value="White">White</option>
-            <option value="Grey">Grey</option>
-        </select>
-        <button class="btn2" >select</button>
+                <select name="color" class="defarentcars2">
+                    <option value="Blue">Blue</option>
+                    <option value="Red">Red</option>
+                    <option value="Orange">Orange</option>
+                    <option value="White">White</option>
+                    <option value="Grey">Grey</option>
+                </select>
+                <button class="btn2">select</button>
 
-        <br><br>
+                <br><br>
 
-        <div class="desplay2"></div>
+                <div class="desplay2"></div>
 
+            </div>
+        </div>
     </div>
 
     <script src="./index.js"></script>
