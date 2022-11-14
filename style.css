@@ -1,6 +1,7 @@
-.cars{
-    border: 1px solid;
-}
-/* table, th, td {
-    border: 1px solid;
-  } */
+
+table, th, td {
+    padding-right: 50px;
+    border-collapse: collapse;
+    border: solid black;
+
+  }
