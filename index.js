@@ -61,64 +61,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 btn.addEventListener('click', function () {
 
-    if (defarentcars.value === "Ford") {
-        console.log(cars.value);
+    if (defarentcars.value) {
+        
         axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/make/Ford`)
+            .get(`https://api-tutor.herokuapp.com/v1/cars/make/`+defarentcars.value)
             .then(result => {
                 const difrentmake = result.data;
-                console.log(difrentmake);
+                
                 let html = makeFiltering({
                     makefilter: difrentmake
                 });
                 desplay.innerHTML = html;
 
             });
-    } else if (defarentcars.value === "Nissan") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/make/Nissan`)
-            .then(result => {
-                const difrentmake = result.data;
-                console.log(difrentmake);
-                let html = makeFiltering({
-                    makefilter: difrentmake
-                });
-                desplay.innerHTML = html;
-
-            });
-    } else if (defarentcars.value === "Toyota") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/make/Toyota`)
-            .then(result => {
-                const difrentmake = result.data;
-                console.log(difrentmake);
-                let html = makeFiltering({
-                    makefilter: difrentmake
-                });
-                desplay.innerHTML = html;
-
-            });
-    } else if (defarentcars.value === "Volkswagen") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/make/Volkswagen`)
-            .then(result => {
-                const difrentmake = result.data;
-                console.log(difrentmake);
-                let html = makeFiltering({
-                    makefilter: difrentmake
-                });
-                desplay.innerHTML = html;
-
-            });
-
-    }
+    } 
 })
 btn2.addEventListener('click', function () {
 
-    if (defarentcars2.value === "Blue") {
+    if (defarentcars2.value) {
         
         axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/make/Ford`)
+            .get(`https://api-tutor.herokuapp.com/v1/cars/color/`+defarentcars2.value)
             .then(result => {
                 const difrentcolor = result.data;
             
@@ -128,54 +91,5 @@ btn2.addEventListener('click', function () {
                 desplay2.innerHTML = html;
 
             });
-    } else if (defarentcars2.value === "Red") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/color/Red`)
-            .then(result => {
-                const difrentcolor = result.data;
-                
-                let html = colorFiltering({
-                    colorfilter: difrentcolor
-                });
-                desplay2.innerHTML = html;
-
-            });
-    } else if (defarentcars2.value === "Orange") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/color/Orange`)
-            .then(result => {
-                const difrentcolor = result.data;
-            
-                let html = colorFiltering({
-                    colorfilter: difrentcolor
-                });
-                desplay2.innerHTML = html;
-
-            });
-    } else if (defarentcars2.value === "White") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/color/White`)
-            .then(result => {
-                const difrentcolor = result.data;
-            
-                let html = colorFiltering({
-                    colorfilter: difrentcolor
-                });
-                desplay2.innerHTML = html;
-
-            });
-
-    } else if (defarentcars2.value === "Grey") {
-        axios
-            .get(`https://api-tutor.herokuapp.com/v1/cars/color/Grey`)
-            .then(result => {
-                const difrentcolor = result.data;
-                console.log(difrentcolor);
-                let html = colorFiltering({
-                    colorfilter: difrentcolor
-                });
-                desplay2.innerHTML = html;
-
-            });
-    }
+    } 
 })
