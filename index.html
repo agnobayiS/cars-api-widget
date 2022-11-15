@@ -17,9 +17,11 @@
     <script type="text/x-tamplate" class="colorTemplateFilter">
         <h3>Cars With color</h3>
         {{#each colorfilter}}
-        <li>
-               {{this.model}}
-        </li>
+        <table>
+            <td>{{make}}</td>
+            <td>{{model}}</td>
+            <td>{{reg_number}}</td>
+        </table>
              {{/each}}
 
      </script>
@@ -27,9 +29,11 @@
     <script type="text/x-tamplate" class="makeTemplateFilter">
         <h3>Cars From Brand</h3>
         {{#each makefilter}}
-        <li>
-               {{this.model}}
-        </li>
+        <table>
+            <td>{{color}}</td>
+            <td>{{model}}</td>
+            <td>{{reg_number}}</td>
+        </table>
              {{/each}}
 
      </script>
@@ -83,7 +87,16 @@
             <button class="btn">Filter</button>
 
             <br><br>
-
+            <table class="cente">
+                <thead>
+                    <tr>
+                        <th>make</th>
+                        <th>color</th>
+                        <th>reg_number</th>
+                    </tr>
+                </thead>
+                <tbody class="desplay"></tbody>
+            </table>
             <div class="desplay"></div>
 
         </div>
@@ -103,8 +116,17 @@
             <button class="btn2">Filter</button>
 
             <br><br>
-
-            <div class="desplay2"></div>
+            <table class="cente">
+                <thead>
+                    <tr>
+                        <th>make</th>
+                        <th>model</th>
+                        <th>reg_number</th>
+                    </tr>
+                </thead>
+                <tbody class="desplay2"></tbody>
+            </table>
+            <!-- <div class="desplay2"></div> -->
 
         </div>
 
